@@ -37,7 +37,6 @@ export interface IIframeBaseProps {
     onMouseOver?: () => void;
     onMouseOut?: () => void;
     frameBorder?: number;
-    id?: string;
     ariaHidden?: boolean;
     ariaLabel?: string;
     ariaLabelledby?: string;

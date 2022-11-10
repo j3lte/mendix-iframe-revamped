@@ -1,9 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable no-prototype-builtins */
-/* eslint-disable prefer-const */
-
 /*
 Copied from https://github.com/robbestad/react-iframe
 With some modifications
@@ -23,7 +17,6 @@ export const Iframe: FC<IIframeBaseProps> = ({
     onLoad,
     onMouseOver,
     onMouseOut,
-    id,
     frameBorder,
     ariaHidden,
     sandbox,
@@ -52,7 +45,6 @@ export const Iframe: FC<IIframeBaseProps> = ({
         referrerPolicy: referrerPolicy || null,
         title: title || null,
         allow: allow || null,
-        id: id || null,
         "aria-labelledby": ariaLabelledby || null,
         "aria-hidden": ariaHidden || null,
         "aria-label": ariaLabel || null,
@@ -65,7 +57,7 @@ export const Iframe: FC<IIframeBaseProps> = ({
     });
 
     const props = Object.create(null) as IFrameProps;
-    for (let prop of Object.keys(defaultProps) as IFrameAttribute[]) {
+    for (const prop of Object.keys(defaultProps) as IFrameAttribute[]) {
         if (defaultProps[prop] != null) {
             props[prop] = defaultProps[prop];
         }
@@ -80,7 +72,7 @@ export const Iframe: FC<IIframeBaseProps> = ({
     }
 
     if (frameBorder && frameBorder >= 0) {
-        if (!props.style.hasOwnProperty("border")) {
+        if (!props.style.border) {
             props.style.border = frameBorder;
         }
     } else {
