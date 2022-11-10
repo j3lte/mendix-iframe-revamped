@@ -27,12 +27,10 @@
   "devDependencies": {
     "@mendix/pluggable-widgets-tools": "^9.18.0",
     "@types/big.js": "^6.0.2",
-    "@types/object-assign": "^4.0.30",
     "@types/react": "~17.0.1",
     "@types/react-dom": "~17.0.1"
   },
   "dependencies": {
-    "clsx": "^1.2.1",
-    "object-assign": "^4.1.1"
+    "clsx": "^1.2.1"
   }
 }
