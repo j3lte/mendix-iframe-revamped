@@ -1,0 +1,38 @@
+{
+  "name": "iframerevamped",
+  "widgetName": "IframeRevamped",
+  "version": "1.0.0",
+  "description": "Iframe",
+  "copyright": "@ CaffCode 2022",
+  "author": "Jelte Lagendijk <jelte@caffcode.com>",
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "MIT",
+  "config": {
+    "projectPath": "./tests/testProject",
+    "mendixHost": "http://localhost:8888",
+    "developmentPort": 3000
+  },
+  "packagePath": "caffcode",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:server",
+    "dev": "pluggable-widgets-tools start:web",
+    "build": "pluggable-widgets-tools build:web",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:web"
+  },
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^9.18.0",
+    "@types/big.js": "^6.0.2",
+    "@types/object-assign": "^4.0.30",
+    "@types/react": "~17.0.1",
+    "@types/react-dom": "~17.0.1"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "object-assign": "^4.1.1"
+  }
+}
